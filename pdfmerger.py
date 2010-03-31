@@ -9,14 +9,6 @@ import getopt
 
 from pyPdf import PdfFileWriter, PdfFileReader
 
-output = PdfFileWriter()
-input1 = PdfFileReader(file("04.apr.pdf", "rb"))
-input2 = PdfFileReader(file("05.may.pdf", "rb"))
-
-output.addPage(input1.getPage(0))
-output.addPage(input2.getPage(0))
-
-
 def main():
     try:
         opts, args = getopt.getopt(sys.argv[1:], "h", ["help"])
